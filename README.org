@@ -1,0 +1,48 @@
+#+TITLE:	README for TestExif-Master
+#+AUTHOR:	hanuomk2(odaba)
+#+DATE:		2017-06-24
+
+* TestExif-Master
+
+Qt(C++)でExifデータにアクセスするコードを公開します。
+
+** 謝辞
+
+[[http://dsas.blog.klab.org/archives/52123322.html][Klab DSAS開発者の部屋: Exif データにアクセスするコードを自作してみる]]
+にて、公開されているソースコードを移植しました。
+
+先人の方々のご好意で本コードを公開できました。本当にありがとうございます。
+
+** 環境
+
+ - OS: 		Microsoft Windows 7 pro 64bit
+ - IDE: 	QtCreator 4.0.2 
+ - Qt(Ver.):Qt 5.7.0(MSVC 2015, 64ビット)
+
+** 使い方
+
+適当なフォルダにzipファイルを展開し、
+Qt Creatorで"TestExif-Master.pro"ファイルを開き、実行して下さい。
+
+** ライセンス
+
+Apache License 2.0
+(ソースコードは、Apache Licenseです。
+ もちろん、Qtを使用しているので、コンパイルして再配布する場合、
+ ライブラリ等Qtの部分はLGPL 3.0となります)
+
+** その他
+
+ - Exifデータにサムネイル画像がある場合に、サムネイル画像を表示します。
+ - ExifデータのOrientation情報を基に画像の向きを正しています。
+
+ - "exif.c"ファイルの構造体"_tagNode", "_ifdTable"をコメントアウトし、
+   "exif.h"ファイルに加えました。
+ - "exif.c"ファイルの関数""dumpIfdTabel", "getTagName"を
+   "widget.cpp"ファイル(widgetクラスのメンバ関数)に移植しました。
+
+ - 後になって気付いたんだけど、QMediaMetaDataでも同じ事が出来るみたい。。。orz
+
+** 画面
+
+ [[file:TestExif-Master.jpg]] 
